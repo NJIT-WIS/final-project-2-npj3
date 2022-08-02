@@ -1,0 +1,64 @@
+{
+  "tests": [
+    {
+      "name": "Pytest Pylint",
+      "setup": "sudo -H pip3 install -r pip3 install -r requirements.txt ",
+      "run": "pytest --pylint",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Dashboard Tests",
+      "setup": "sudo -H pip3 install -r requirements.txt ",
+      "run": "pytest --pylint tests/dashboard_test.py ",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Genre Tests",
+      "setup": "sudo -H pip3 install -r requirements.txt ",
+      "run": "pytest --pylint tests/genre_test.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Contact Feature",
+      "setup": "sudo -H pip3 install -r requirements.txt ",
+      "run": "pytest --pylint tests/contact_test.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 30
+    },
+    {
+      "name": "Feature 1",
+      "setup": "sudo -H pip3 install -r requirements.txt ",
+      "run": "pytest --pylint tests/feature1_test.py",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    },
+    {
+      "name": "Feature 2",
+      "setup": "sudo -H pip3 install -r requirements.txt ",
+      "run": "pytest --pylint tests/feature2_test.py ",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 25
+    }
+  ]
+}
