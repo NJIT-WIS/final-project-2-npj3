@@ -2,7 +2,7 @@
   "tests": [
     {
       "name": "Pytest Pylint",
-      "setup": "sudo -H pip3 install -r pip3 install -r requirements.txt ",
+      "setup": "sudo -H pip3 install -r requirements.txt ",
       "run": "pytest --pylint",
       "input": "",
       "output": "",
