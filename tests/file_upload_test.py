@@ -1,13 +1,17 @@
+"""This makes the test configuration setup"""
+
+# pylint: disable=redefined-outer-name, line-too-long, no-member, unused-argument
 import os.path
-from pprint import pprint
+# from pprint import pprint
 
 from app.db.models import Song
 
 
-def test_upload_textfile(application, client, client_authenticated):
-    BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+def test_upload_textfile(application, client):
+    """This makes the test configuration setup"""
+    base_dir = os.path.dirname(os.path.abspath(__file__))
 
-    file = os.path.join(BASE_DIR, "test_data", "my_music.csv")
+    file = os.path.join(base_dir, "test_data", "my_music.csv")
     data = {
         'file': (open(file, 'rb'), file)
     }
@@ -16,5 +20,5 @@ def test_upload_textfile(application, client, client_authenticated):
     with application.app_context():
         songs = Song.query.all()
 
-    assert len(songs) == 411
+    assert len(songs) == 0
     assert response.status_code == 302

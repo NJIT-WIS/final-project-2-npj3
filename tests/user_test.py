@@ -1,11 +1,17 @@
+"""This makes the test configuration setup"""
+
+# pylint: disable=redefined-outer-name, line-too-long, no-member, unused-argument
 import logging
 
 from app import db
 from app.db.models import User
-from faker import Faker
+# from faker import Faker
 
 
 def test_adding_user(application):
+    """This makes the test configuration setup"""
+
+    # pylint: disable=redefined-outer-name, line-too-long, no-member, unused-argument
     log = logging.getLogger("myApp")
     with application.app_context():
         db.drop_all()

@@ -1,6 +1,6 @@
 """This makes the test configuration setup"""
 # pylint: disable=redefined-outer-name, line-too-long
-import logging
+# import logging
 import os
 
 import pytest
@@ -32,6 +32,7 @@ def application():
 
 @pytest.fixture()
 def add_user(application):
+    """This makes the test configuration setup"""
     with application.app_context():
         # new record
         user = User('test@test.com', 'testtest')
@@ -48,13 +49,16 @@ def client(application):
     yield testing_client
     ctx.pop()
 
+
 @pytest.fixture()
-def client_authenticated(application, client, add_user):
+def client_authenticated(client):
+    """This makes the test configuration setup"""
     client.post(
-            "/login",
-            data=dict(email='test@test.com', password='testtest'),
-            follow_redirects=True
-        )
+        "/login",
+        data=dict(email='test@test.com', password='testtest'),
+        follow_redirects=True
+    )
+
 
 @pytest.fixture()
 def runner(application):
