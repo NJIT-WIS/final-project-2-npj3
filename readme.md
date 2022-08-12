@@ -1,9 +1,9 @@
 # Project 2 / Final Module
 
-Name:
-UCID:
+Name: Nava Praharsha
+UCID: npj3@njit.edu
 
-[![Production Workflow]() <-Put your own badge code here.
+[![Production Workflow]([![Production Workflow 1](https://github.com/NJIT-WIS/final-project-2-npj3/actions/workflows/prod.yml/badge.svg)](https://github.com/NJIT-WIS/final-project-2-npj3/actions/workflows/prod.yml)) <-Put your own badge code here.
 
 [Production Deployment]()
 
